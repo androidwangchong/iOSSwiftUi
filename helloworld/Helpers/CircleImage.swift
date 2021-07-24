@@ -13,10 +13,12 @@ struct CircleImage: View {
     var imageHeight: CGFloat = 0
     var body: some View {
         image
+            .resizable()
+            .frame(width: imageWidth, height: imageHeight)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color.white, lineWidth: 4))
             .shadow(radius: 7)
-            .frame(width: imageWidth, height: imageHeight)
+            
             
     }
 }
